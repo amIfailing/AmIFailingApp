@@ -123,18 +123,25 @@ public class MyApplication {
         projectsWeight.add(BorderLayout.CENTER, new TextField(""));
         
         Button next = new Button("Next");
+        next.addActionListener((e)->
+        {
+            //String qWeight = quizCountContainer.getText();
+        
+        });
+        
         
         hi.add("Course Name").add(name);
-        hi.add(quizCheck);
-        hi.add(quizWeight).add(quizCountContainer);
-        hi.add(homeworksCheck);
-        hi.add(hmwkWeight).add(hmwkCountContainer);
         hi.add(examsCheck);
         hi.add(examsWeight).add(examsCountContainer);
+        hi.add(homeworksCheck);
+        hi.add(hmwkWeight).add(hmwkCountContainer);
         hi.add(papersCheck);
         hi.add(papersWeight).add(papersCountContainer);
         hi.add(projectsCheck);
         hi.add(projectsWeight).add(projectsCountContainer);
+        hi.add(quizCheck);
+        hi.add(quizWeight).add(quizCountContainer);
+        
         hi.add(next);
         
         hi.show();
