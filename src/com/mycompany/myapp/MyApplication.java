@@ -62,6 +62,10 @@ public class MyApplication {
             current.show();
             return;
         }
+        
+        //Variables?
+        boolean array;
+        
         TableLayout tl;
         int spanButton = 2;
         if(Display.getInstance().isTablet()) 
@@ -80,24 +84,7 @@ public class MyApplication {
         
         TextField name = new TextField("", "Course Name", 20, TextArea.ANY);
         
-               
-        CheckBox quizCheck = new CheckBox("Quizzes");
-        Container quizCountContainer = new Container(new BorderLayout());
-        quizCountContainer.add(BorderLayout.WEST, new Label("Number of Quizzes:"));
-        quizCountContainer.add(BorderLayout.CENTER, new TextField(""));
-        Container quizWeight = new Container(new BorderLayout());
-        quizWeight.add(BorderLayout.WEST, new Label("Weight:"));
-        quizWeight.add(BorderLayout.CENTER, new TextField(""));
-        
-        CheckBox homeworksCheck = new CheckBox("Homeworks");
-        Container hmwkCountContainer = new Container(new BorderLayout());
-        hmwkCountContainer.add(BorderLayout.WEST, new Label("Number of homeworks:"));
-        hmwkCountContainer.add(BorderLayout.CENTER, new TextField(""));
-        Container hmwkWeight = new Container(new BorderLayout());
-        hmwkWeight.add(BorderLayout.WEST, new Label("Weight:"));
-        hmwkWeight.add(BorderLayout.CENTER, new TextField(""));
- 
-        
+        //Should rearrange these so they're in alphabetical order #fixlater         
         CheckBox examsCheck = new CheckBox("Exams");
         Container examsCountContainer = new Container(new BorderLayout());
         examsCountContainer.add(BorderLayout.WEST, new Label("Number of exams:"));
@@ -105,7 +92,15 @@ public class MyApplication {
         Container examsWeight = new Container(new BorderLayout());
         examsWeight.add(BorderLayout.WEST, new Label("Weight:"));
         examsWeight.add(BorderLayout.CENTER, new TextField(""));
-        
+
+        CheckBox homeworksCheck = new CheckBox("Homeworks");
+        Container hmwkCountContainer = new Container(new BorderLayout());
+        hmwkCountContainer.add(BorderLayout.WEST, new Label("Number of homeworks:"));
+        hmwkCountContainer.add(BorderLayout.CENTER, new TextField(""));
+        Container hmwkWeight = new Container(new BorderLayout());
+        hmwkWeight.add(BorderLayout.WEST, new Label("Weight:"));
+        hmwkWeight.add(BorderLayout.CENTER, new TextField(""));
+
         CheckBox papersCheck = new CheckBox("Papers");
         Container papersCountContainer = new Container(new BorderLayout());
         papersCountContainer.add(BorderLayout.WEST, new Label("Number of papers:"));
@@ -122,6 +117,14 @@ public class MyApplication {
         projectsWeight.add(BorderLayout.WEST, new Label("Weight:"));
         projectsWeight.add(BorderLayout.CENTER, new TextField(""));
         
+        CheckBox quizCheck = new CheckBox("Quizzes");
+        Container quizCountContainer = new Container(new BorderLayout());
+        quizCountContainer.add(BorderLayout.WEST, new Label("Number of Quizzes:"));
+        quizCountContainer.add(BorderLayout.CENTER, new TextField(""));
+        Container quizWeight = new Container(new BorderLayout());
+        quizWeight.add(BorderLayout.WEST, new Label("Weight:"));
+        quizWeight.add(BorderLayout.CENTER, new TextField(""));
+   
         Button next = new Button("Next");
         
         hi.add("Course Name").add(name);
@@ -138,6 +141,24 @@ public class MyApplication {
         hi.add(next);
         
         hi.show();
+        
+      
+        //Code for the end of the "add course" page  
+        /*{
+            projectsCheck.addActionListener(l);
+            examsCheck.addActionListener(l);
+            quizzesCheck.addActionListener(l);
+            papersCheck.addActionListener(l);
+        }
+        */
+        
+        //Code for the quiz page  
+        /*{
+        
+        
+        }
+        */
+        
     }
 
     public void stop() {
