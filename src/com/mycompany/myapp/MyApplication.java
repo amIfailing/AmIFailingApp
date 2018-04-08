@@ -64,7 +64,12 @@ public class MyApplication {
         }
         
         //Variables?
-        boolean array;
+        int numCategories = 5; 
+        boolean checkBoxArr[] = new boolean[numCategories];
+        for(int i = 0; i < numCategories; i++)//initialize array
+        {
+            checkBoxArr[i] = false; 
+        }
         
         TableLayout tl;
         int spanButton = 2;
@@ -148,14 +153,14 @@ public class MyApplication {
         hi.add(next);
         
         hi.show();
-        
       
         //Code for the end of the "add course" page  
         /*{
-            projectsCheck.addActionListener(l);
-            examsCheck.addActionListener(l);
+            examsCheck.addActionListener(checkBoxArr[0] = true);
+            homeworksCheck.addActionListener(l);
             quizzesCheck.addActionListener(l);
             papersCheck.addActionListener(l);
+            projectsCheck.addActionListener(l);
         }
         */
         
